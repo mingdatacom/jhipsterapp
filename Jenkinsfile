@@ -55,7 +55,7 @@ node {
     }
 
     stage('publish docker') {
-        docker.withRegistry('https://registry.hub.docker.com', 'datacomrd') {
+        docker.withRegistry('http://192.168.1.71:8083', 'datacomrd') {
             dockerImage.push 'latest'
         }
     }
